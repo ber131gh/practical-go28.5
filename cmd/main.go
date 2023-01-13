@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 	"strings"
-	"test/pkg/repo"
-	"test/pkg/student"
+	"test/internal/repo"
+	"test/internal/student"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 		fmt.Print("Введите через пробел данные студента: имя, возраст, уровень: ")
 		text, err := reader.ReadString('\n') // считываем текст с командной строки
 		if err != nil {                      // обрабатываем ошибку ввода
-			if err == io.EOF { // если прерывание считывания (Ctrl+z)
+			if err == io.EOF { // если прерывание считывания (Ctrl+z>Enter)
 				break // то выход из цикла
 			}
 			panic(err)

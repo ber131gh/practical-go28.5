@@ -3,7 +3,7 @@ package repo
 import (
 	"fmt"
 	"strconv"
-	"test/pkg/student"
+	"test/internal/student"
 )
 
 type studentName string
